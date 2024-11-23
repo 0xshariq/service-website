@@ -31,6 +31,7 @@ const currentJobs: Job[] = [
 
 export function CurrentJobs() {
   return (
+    <div className="mt-32 mb-32">
     <Card className="w-full">
       <CardHeader>
         <CardTitle className="text-2xl font-bold">
@@ -84,6 +85,7 @@ export function CurrentJobs() {
         </div>
       </CardContent>
     </Card>
+    </div>
   )
 }
 
