@@ -81,16 +81,13 @@ export function Navbar() {
       <div className="h-[40px] bg-[#333333]">
         <div className="container mx-auto h-full px-4">
           <ul className="hidden h-full items-center justify-between md:flex">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <li 
                 key={item.name} 
-                className="relative h-full flex items-center"
+                className="h-full"
                 onMouseEnter={() => setHoveredItem(item.name)}
                 onMouseLeave={() => setHoveredItem(null)}
               >
-                {index > 0 && (
-                  <div className="absolute -left-px h-4 w-px bg-gray-600" />
-                )}
                 {item.items ? (
                   <DropdownMenu open={hoveredItem === item.name}>
                     <DropdownMenuTrigger className={`h-full px-4 text-[13px] font-medium transition-colors ${
