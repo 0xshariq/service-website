@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Menu, ChevronDown, X, Home, Briefcase, FileText, Building, Users, Phone, FileQuestion } from 'lucide-react'
+import { Menu, ChevronDown, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -12,17 +12,16 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet'
-// import { cn } from '@/lib/utils'
 
 const navItems = [
-  { name: 'OVERVIEW', icon: Home, items: ['About Us', 'Vision And Mission', 'Licence & Certificates', 'Our Associates'] },
-  { name: 'SERVICES', icon: Briefcase, items: ['HRD & Recruitment', 'Banking & Finance', 'Hospitality Industries', 'Gems & Jewellery Industries', 'Construction Industry'] },
-  { name: 'OPENING', icon: FileText, href: '/opening' },
-  { name: 'EMPLOYER', icon: Building, items: ['Demand Letter & Power Of Attorney Sample', 'Visa Procedure & Documentation', 'Flow Chart', 'Post Your Requirements'] },
-  { name: 'RESUME', icon: FileText, href: '/resume' },
-  { name: 'CLIENTS', icon: Users, href: '/clients' },
-  { name: 'CONTACT', icon: Phone, items: ['Contact Us', 'Grievance Redressal Form'] },
-  { name: 'APPLICATION FORM', icon: FileQuestion, href: '/application-form' },
+  { name: 'OVERVIEW', items: ['About Us', 'Vision And Mission', 'Licence & Certificates', 'Our Associates'] },
+  { name: 'SERVICES', items: ['HRD & Recruitment', 'Banking & Finance', 'Hospitality Industries', 'Gems & Jewellery Industries', 'Construction Industry'] },
+  { name: 'OPENING', href: '/opening' },
+  { name: 'EMPLOYER', items: ['Demand Letter & Power Of Attorney Sample', 'Visa Procedure & Documentation', 'Flow Chart', 'Post Your Requirements'] },
+  { name: 'RESUME', href: '/resume' },
+  { name: 'CLIENTS', href: '/clients' },
+  { name: 'CONTACT', items: ['Contact Us', 'Grievance Redressal Form'] },
+  { name: 'APPLICATION FORM', href: '/application-form' },
 ]
 
 export function Navbar() {
@@ -82,17 +81,21 @@ export function Navbar() {
       <div className="h-[40px] bg-[#333333]">
         <div className="container mx-auto h-full px-4">
           <ul className="hidden h-full items-center justify-between md:flex">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <li 
                 key={item.name} 
-                className="h-full"
+                className="relative h-full flex items-center"
                 onMouseEnter={() => setHoveredItem(item.name)}
                 onMouseLeave={() => setHoveredItem(null)}
               >
+                {index > 0 && (
+                  <div className="absolute -left-px h-4 w-px bg-gray-600" />
+                )}
                 {item.items ? (
                   <DropdownMenu open={hoveredItem === item.name}>
-                    <DropdownMenuTrigger className="flex h-full items-center gap-1 px-3 text-[13px] font-medium text-white hover:bg-[#404040]">
-                      <item.icon className="h-4 w-4" />
+                    <DropdownMenuTrigger className={`h-full px-4 text-[13px] font-medium transition-colors ${
+                      hoveredItem === item.name ? 'text-[#FF6600]' : 'text-white'
+                    }`}>
                       {item.name}
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
@@ -111,9 +114,10 @@ export function Navbar() {
                 ) : (
                   <Link 
                     href={item.href || '/'} 
-                    className="flex h-full items-center gap-1 px-3 text-[13px] font-medium text-white hover:bg-[#404040]"
+                    className={`h-full flex items-center px-4 text-[13px] font-medium transition-colors ${
+                      hoveredItem === item.name ? 'text-[#FF6600]' : 'text-white'
+                    }`}
                   >
-                    <item.icon className="h-4 w-4" />
                     {item.name}
                   </Link>
                 )}
@@ -160,7 +164,6 @@ function MobileMenu({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) {
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex w-full items-center justify-between text-sm font-medium">
                   <span className="flex items-center gap-2">
-                    <item.icon className="h-4 w-4" />
                     {item.name}
                   </span>
                   <ChevronDown className="h-4 w-4" />
@@ -182,10 +185,9 @@ function MobileMenu({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) {
             ) : (
               <Link 
                 href={item.href || '/'} 
-                className="flex items-center gap-2 text-sm font-medium"
+                className="text-sm font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                <item.icon className="h-4 w-4" />
                 {item.name}
               </Link>
             )}
