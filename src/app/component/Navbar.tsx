@@ -31,6 +31,7 @@ const navItems = [
   },
   {
     name: "OVERVIEW",
+    href: "/overview",
     items: [
       { name: "About Us", href: "/overview/about-us" },
       { name: "Vision And Mission", href: "/overview/vision-and-mission" },
@@ -40,6 +41,7 @@ const navItems = [
   },
   {
     name: "SERVICES",
+    href: "/services",
     items: [
       { name: "HRD & Recruitment", href: "/services/hrd-and-recruitment" },
       { name: "Banking & Finance", href: "/services/banking-and-finance" },
@@ -51,6 +53,7 @@ const navItems = [
   { name: "OPENING", href: "/opening" },
   {
     name: "EMPLOYER",
+    href: "/employer",
     items: [
       { name: "Demand Letter & Power Of Attorney Sample", href: "/employer/demand-letter-and-power-of-attorney-sample" },
       { name: "Visa Procedure & Documentation", href: "/employer/visa-procedure-and-documentation" },
@@ -62,6 +65,7 @@ const navItems = [
   { name: "CLIENTS", href: "/clients" },
   {
     name: "CONTACT",
+    href: "/contact",
     items: [
       { name: "Contact Us", href: "/contact/contact-us" },
       { name: "Grievance Redressal Form", href: "/contact/grievance-redressal-form" },
@@ -146,7 +150,7 @@ export function Navbar() {
                 {item.items ? (
                   <DropdownMenu open={hoveredItem === item.name}>
                     <DropdownMenuTrigger
-                      className={`h-full px-2 sm:px-4 text-xs sm:text-[15px] font-medium transition-colors hover:text-[#FF6600] ${
+                      className={`h-full px-2 sm:px-4 text-xs sm:text-[15px] font-medium hover:text-[#FF6600] ${
                         hoveredItem === item.name
                           ? "text-[#FF6600]"
                           : "text-white"
@@ -170,7 +174,7 @@ export function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`h-full flex items-center px-2 sm:px-4 text-xs sm:text-[15px] font-medium transition-colors hover:text-[#FF6600] ${
+                    className={`h-full flex items-center px-2 sm:px-4 text-xs sm:text-[15px] font-medium hover:text-[#FF6600] ${
                       hoveredItem === item.name
                         ? "text-[#FF6600]"
                         : "text-white"
