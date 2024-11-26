@@ -150,7 +150,7 @@ export function Navbar() {
                 {item.items ? (
                   <DropdownMenu open={hoveredItem === item.name}>
                     <DropdownMenuTrigger
-                      className={`h-full px-2 sm:px-4 text-xs sm:text-[15px] font-medium hover:text-[#FF6600] ${
+                      className={`h-full px-2 sm:px-4 text-xs sm:text-[15px] font-medium ${
                         hoveredItem === item.name
                           ? "text-[#FF6600]"
                           : "text-white"
@@ -163,7 +163,7 @@ export function Navbar() {
                         <DropdownMenuItem key={subItem.name} asChild>
                           <Link
                             href={subItem.href}
-                            className="text-sm sm:text-[15px] hover:text-[#FF6600]"
+                            className="text-sm sm:text-[15px] text-gray-900 hover:text-[#FF6600]"
                           >
                             {subItem.name}
                           </Link>
@@ -174,7 +174,7 @@ export function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`h-full flex items-center px-2 sm:px-4 text-xs sm:text-[15px] font-medium hover:text-[#FF6600] ${
+                    className={`h-full flex items-center px-2 sm:px-4 text-xs sm:text-[15px] font-medium ${
                       hoveredItem === item.name
                         ? "text-[#FF6600]"
                         : "text-white"
