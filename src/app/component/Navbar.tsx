@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -50,7 +50,7 @@ const navItems = [
       { name: "Construction Industry", href: "/services/construction-industry" },
     ],
   },
-  { name: "OPENING", href: "/opening" },
+  { name: "JOBS", href: "/jobs" },
   {
     name: "EMPLOYER",
     href: "/employer",
@@ -204,7 +204,6 @@ function MobileMenu({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) {
               size="icon"
               onClick={() => setIsOpen(false)}
             >
-              <X className="h-6 w-6" />
               <span className="sr-only">Close menu</span>
             </Button>
           </SheetClose>
@@ -273,4 +272,3 @@ function MobileMenu({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) {
     </div>
   );
 }
-

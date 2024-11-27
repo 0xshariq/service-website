@@ -1,0 +1,412 @@
+[
+    {
+      "id": "trailer-driver-1",
+      "title": "TRAILER DRIVER",
+      "salary": "SR1500/- + TRIP",
+      "company": "M/s. SULEIMAN FALEH AL ANAJI TRANSPORT",
+      "location": "RIYADH, SAUDI ARABIA",
+      "position": 20,
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "description": "Only Fresher with 3-5 Years Experience",
+        "age": "26-40",
+        "additionalInfo": ["SALARY: SR1500+Trip"]
+      }
+    },
+    {
+      "id": "trailer-driver-2",
+      "title": "TRAILER DRIVER",
+      "salary": "SR1500/- + TRIP",
+      "company": "GULF TAIBAT TRADING COMPANY",
+      "location": "DAMMAM, SAUDI ARABIA",
+      "position": 6,
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "description": "Saudi Return with 3-5 Years Experience",
+        "age": "30-45",
+        "additionalInfo": ["Salary: SR1500+ Trip"]
+      }
+    },
+    {
+      "id": "trailer-driver-fresher",
+      "title": "TRAILER DRIVER (FRESHER)",
+      "salary": "SR1200/-+TRIP TO SR1400/-+TRIP AFTER LICENSE",
+      "company": "GULF TAYBAT TRADING COMPANY",
+      "location": "DAMMAM, KSA",
+      "position": 15,
+      "experience": "2-4 INDIAN",
+      "jobInformation": {
+        "description": "M/s. Gulf Taybat Trading Company, Dammam\n10 Fresh Trailer Driver",
+        "additionalInfo": [
+          "1200+Trip ( Candidate has to pay 2500 SAR from his salary for Licence)",
+          "After getting Saudi Heavy Licence salary will be 1400 SAR+ Trip",
+          "Any passport (ECR / ECNR)"
+        ]
+      }
+    },
+    {
+      "id": "safety-officer",
+      "title": "SAFETY OFFICER ( IQSH & NEBOSH)",
+      "salary": "SR2000/-",
+      "company": "HOCC, DAMMAM",
+      "location": "DAMMAM, SAUDI ARABIA",
+      "position": "SAFETY OFFICER ( IQSH & NEBOSH)",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "description": "HOCC COMPANY, DAMMAM, SAUDI ARABIA,\nSAFETY OFFICER ( IQSH & NEBOSH)",
+        "additionalInfo": ["SALARY WILL BE 2000SAR GULF RETURN PREFERED"]
+      }
+    },
+    {
+      "id": "electrician",
+      "title": "Electrician",
+      "salary": "SR 1600 SR Including (200 SR) food",
+      "company": "HOCC, DAMMAM",
+      "location": "DAMMAM, SAUDI ARABIA",
+      "position": "Electrician",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "interview": {
+          "date": "12TH SEPTEMBER 2024",
+          "location": "MUMBAI OFFICE"
+        },
+        "description": "Electrician should have a diploma certificate of training from an accredited technical college, must have 3-5 years' Experience. Gulf Experienced preferred. (Must writing and talking English language)",
+        "age": "25 to 35",
+        "workingHours": "10 working hours",
+        "additionalInfo": ["SR 1600 SR Including (200 SR) food's allowance."]
+      }
+    },
+    {
+      "id": "diesel-mechanic",
+      "title": "DIESEL MECHANIC(HEAVY VEHICLE)",
+      "salary": "SR1500/-+SR300/-",
+      "company": "Al Mabdaeen Contracting Co., Dammam,KSA",
+      "location": "Dammam, KSA",
+      "position": 4,
+      "experience": "2-5 YEARS",
+      "jobInformation": {
+        "description": "URGENTLY NEEDED FOR\nAl Mabdaeen Contracting Co., Dammam,K.S.A.\nDIESEL MECHANIC (HEAVY VEHICLE)",
+        "additionalInfo": ["SALARY SR1500/- +SR300/-"]
+      }
+    },
+    {
+      "id": "kitchen-equipment-technician",
+      "title": "KITCHEN EQUIPMENT TECHNICIAN",
+      "salary": "SR2000/- to SR2500/-",
+      "company": "AL FATHI A JAWAD TRADING & CONST. (AL MOHTASEB)",
+      "location": "RIYADH, SAUDI ARABIA",
+      "position": 5,
+      "experience": "4-6 YEARS",
+      "jobInformation": {
+        "description": "M/s. AL FATHI A JAWAD TRADING & CONST. (AL MOHTASEB), RIYADH, SAUDI ARABIA\nNEED KITCHEN EQUIPMENT TECHNICIANS\nQTY – 5",
+        "additionalInfo": [
+          "SALARY : SR2000 TO SR2500/-",
+          "MUST HAVE 4-6 YEARS EXPERIENCE IN SAME FIELD, PREFER GULF EXPERIENCE."
+        ]
+      }
+    },
+    {
+      "id": "hydraulic-mechanic",
+      "title": "HYDRAULIC MECHANIC",
+      "salary": "SR2500/-",
+      "company": "TADMIN CONTRACTING COMPANY",
+      "location": "JEDDAH, KSA",
+      "position": 2,
+      "experience": "2 – 5 YEARS",
+      "jobInformation": {
+        "description": "M/s. TADMIN CONTRACTING COMPANY, JEDDAH, SAUDI ARABIA\nNEEDS – HYDRAULIC MECHANIC – 2 NOS",
+        "additionalInfo": [
+          "SALARY: SR2500/-",
+          "EXPERIENCE: 2-5 YEARS",
+          "GULF RETURN REFER",
+          "APPLY IMMEDIATELY WHO ARE INTERESTED WITH CV AND DOCUMENTS."
+        ]
+      }
+    },
+    {
+      "id": "light-driver",
+      "title": "Light Driver (Coaster Bus & Pickup Truck)",
+      "salary": "SR 1500 SR Including (200 SR) food's allowance",
+      "company": "HOCC, DAMMAM",
+      "location": "DAMMAM, SAUDI ARABIA",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "description": "Light Driver (coaster bus & Pickup truck)",
+        "requirements": [
+          "Must have 3-5 years' Experience",
+          "Gulf Experienced, good looking preferred"
+        ],
+        "age": "25 to 35",
+        "workingHours": "10 working hours",
+        "contract": "1 Year extendable",
+        "interview": {
+          "date": "12TH SEPTEMBER 2024",
+          "location": "MUMBAI OFFICE"
+        }
+      }
+    },
+    {
+      "id": "mobile-crane-operator",
+      "title": "Mobile Crane operator- Aramco Certified",
+      "salary": "Salary – 3000-3500 SAR/-",
+      "company": "Shirka Systematic Company",
+      "location": "Dammam, KSA",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "description": "Required for Shirka Systematic Company\nSector – Dammam, KSA\n5 Returned Mobile Crane operator\nAramco Certified",
+        "requirements": ["All Applicants must know to speak English"],
+        "workingHours": "Duty hours – 10 hours",
+        "benefits": [
+          "Accomodation, transportation and Medical facilities by company",
+          "2 years contract"
+        ]
+      }
+    },
+    {
+      "id": "trailer-driver-3",
+      "title": "TRAILER DRIVER",
+      "salary": "1200+350 (FOOD) AFTER 160 TRIP THEY WILL GET 5 OR 10 RIYAL SR PER TRIP.",
+      "company": "AL HUSSAIN AL MASHAVIR TRANSPORT",
+      "location": "HAFOOF",
+      "position": "TRAILER DRIVER",
+      "experience": "2-3 years",
+      "jobInformation": {
+        "description": "AL HUSSAIN AL MASHAVIR TRANSPORT\nHAFOOF\n03 FRESH TRAILER DRIVER",
+        "requirements": [
+          "AGE – 25 to 30",
+          "MUST HAVE INDIAN HEAVY LICENSE HOLDER"
+        ],
+        "additionalInfo": [
+          "1200+350 (FOOD)",
+          "AFTER 160 TRIP",
+          "THEY WILL GET 5 OR 10 RIYAL SR PER TRIP.",
+          "DISTANCE FOR TRIP IS 20 AND 40 KM LOADING SAND FROM CEMENT FACTORY.",
+          "VISA PROFESSION – DRIVER",
+          "PROPER CV'S, VIDEO AND CONTACT NUMBER IS MUST FOR SELECTION."
+        ]
+      }
+    },
+    {
+      "id": "welders",
+      "title": "WELDERS – 3G/6G (MIG)",
+      "salary": "SR1400/-",
+      "company": "STEEL BUILDING & STRUCTURE CO. LTD DAMMAM",
+      "location": "DAMMAM",
+      "position": "WELDERS – 3G/6G (MIG)",
+      "jobInformation": {
+        "description": "REQUIRED FOR STEEL BUILDING & STRUCTURE CO. LTD\nDAMMAM\n2 WELDERS (EXP. IN 3G, 6G AND MIG)",
+        "additionalInfo": [
+          "SALARY – 1400 SAR",
+          "DUTY HRS 10 HRS",
+          "2 YRS CONTRACT"
+        ]
+      }
+    },
+    {
+      "id": "house-driver-return",
+      "title": "HOUSE DRIVER RETURN – HAIL, SAUDI ARABIA",
+      "salary": "SR1500/- +SR200/-",
+      "company": "HAIL, INDIVIDUAL",
+      "location": "HAIL, SAUDI ARABIA",
+      "position": "HOUSE DRIVER RETURN",
+      "experience": "2-3 years",
+      "jobInformation": {
+        "description": "REQUIRED HOUSE DRIVER RETURN\nHAIL\n1500+200 SAR",
+        "requirements": [
+          "MUST HAVE SAUDI LIGHT LICENCE",
+          "MUSLIM, NON-MUSLIM BOTH ARE ACCEPTED",
+          "AGE – 25-40"
+        ],
+        "additionalInfo": [
+          "PROPER DOCUMENTS WITH CONTACT NUMBER"
+        ]
+      }
+    },
+    {
+      "id": "networking-camera-technicians",
+      "title": "Networking and Camera Technicians – 4 Nos",
+      "salary": "SR2800/- NEGOTIABLE",
+      "company": "REPUTED NETWORKING AND SAFETY COMPANY, JEDDAH",
+      "location": "Jeddah, KSA",
+      "position": "Networking and Camera Technicians",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "description": "REPUTED SAFETY AND NETWORKING COMPANY, Jeddah, KSA\nWe are looking for\nNetworking and Cameras Technicians – 4 Nos",
+        "additionalInfo": [
+          "Salary: 2800 SAR",
+          "Transportation and accommodation, Saudi Medical by Company,",
+          "Other Terms and conditions as per Saudi Labor Law"
+        ]
+      }
+    },
+    {
+      "id": "wall-painters",
+      "title": "Wall Painters",
+      "salary": "SR 1500 SR Including (200 SR) food",
+      "company": "HOCC, DAMMAM",
+      "location": "DAMMAM, SAUDI ARABIA",
+      "position": "Wall Painters",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "interview": {
+          "date": "12TH SEPTEMBER 2024",
+          "location": "MUMBAI OFFICE"
+        },
+        "description": "HOCC, DAMMAM, SAUDI ARABIA",
+        "requirements": [
+          "Must have 3-5 years' Experience. Gulf Experienced preferred.",
+          "Note: Painters should help to another Technician if they don't have work."
+        ],
+        "age": "25 to 35",
+        "workingHours": "10 working hours",
+        "additionalInfo": ["SR 1500 SR Including (200 SR) food's allowance."]
+      }
+    },
+    {
+      "id": "supervisor-aluminum-factory",
+      "title": "Supervisor Aluminum Factory",
+      "salary": "SR4000/-",
+      "company": "Tawfiq Al Saleh Trad. Co., Riyadh, KSA",
+      "location": "Riyadh, KSA",
+      "position": "Supervisor Aluminum Factory",
+      "experience": "5-10 YEARS",
+      "jobInformation": {
+        "description": "M/s. Tawfiq Al Saleh Trad. Co., Riyadh, KSA\nWe required Aluminum Factory Supervisor with:",
+        "requirements": [
+          "1- Experience in GCC Aluminum factory as supervisor/manager NOT worker.",
+          "2- Age above 40 years.",
+          "3- Salary start with SR 4,000 And can be increased depends on experience."
+        ]
+      }
+    },
+    {
+      "id": "gypsum-technician",
+      "title": "Gypsum Technician",
+      "salary": "SR1500 Including (200 SR) food",
+      "company": "HOCC, DAMMAM",
+      "location": "DAMMAM",
+      "position": "Gypsum Technician",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "interview": {
+          "date": "12TH SEPTEMBER 2024",
+          "location": "MUMBAI OFFICE"
+        },
+        "description": "Gypsum Technician",
+        "requirements": [
+          "Must have 3-5 years' Experience. Gulf Experienced preferred.",
+          "Note: Gypsum should help to another Technician if they don't have work."
+        ],
+        "age": "25 to 35",
+        "contract": "1 Year extendable",
+        "workingHours": "10 working hours SR 1500 SR Including (200 SR) food's allowance."
+      }
+    },
+    {
+      "id": "all-rounder-mason",
+      "title": "All Rounder Mason (Block, Plaster, Tiles, Marble)",
+      "salary": "10 working hours SR 1600 SR Including (200 SR) food",
+      "company": "HOCC, DAMMAM",
+      "location": "DAMMAM",
+      "position": "All Rounder Mason (Block, Plaster, Tiles, Marble)",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "interview": {
+          "date": "12TH SEPTEMBER 2024",
+          "location": "MUMBAI OFFICE"
+        },
+        "description": "All Rounder Mason (Block, Plaster, Tiles, Marble)",
+        "age": "25 to 35",
+        "workingHours": "10 working hours",
+        "requirements": [
+          "Must have 3-5 years' Experience. Gulf Experienced preferred.",
+          "Note: Mason should help to another Technician if they",
+          "don't have work. Mason Should not have maintenance work experience"
+        ],
+        "additionalInfo": ["Salary: SR 1600 SR Including (200 SR) food's allowance."]
+      }
+    },
+    {
+      "id": "ac-technician",
+      "title": "AC Technician",
+      "salary": "SR 1800 SR Including (200 SR) food",
+      "company": "HOCC, DAMMAM",
+      "location": "DAMMAM, SAUDI ARABIA",
+      "position": "AC Technician",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "interview": {
+          "date": "12TH SEPTEMBER 2024",
+          "location": "MUMBAI OFFICE"
+        },
+        "description": "AC Technician should have a diploma certificate of training from an accredited technical college, must have 3-5 years' Experience in Air Conditioning industry and HVAC. Gulf Experienced preferred. (Must writing and talking English language)",
+        "age": "25 to 35",
+        "workingHours": "10 working hours",
+        "additionalInfo": [
+          "SR 1800 SR Including (200 SR) food's allowance.",
+          "Contract: 1 Year extendable"
+        ]
+      }
+    },
+    {
+      "id": "plumber",
+      "title": "Plumber",
+      "salary": "SR 1500 SR Including (200 SR) food",
+      "company": "HOCC, DAMMAM",
+      "location": "DAMMAM, SAUDI ARABIA",
+      "position": "Plumber",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "interview": {
+          "date": "12TH SEPTEMBER 2024",
+          "location": "MUMBAI OFFICE"
+        },
+        "description": "Plumbers",
+        "requirements": [
+          "Must have 3-5 years Experience. Gulf Experienced preferred.",
+          "(Must writing and talking English language)"
+        ],
+        "age": "25 to 35",
+        "workingHours": "10 working hours",
+        "additionalInfo": [
+          "SR 1500 SR Including (200 SR) food's allowance.",
+          "Contract: 1 Year extendable"
+        ]
+      }
+    },
+    {
+      "id": "electrician-cctv-technician",
+      "title": "Electrician & CCTV technician",
+      "salary": "SR 1800 SR Including (200 SR) food",
+      "company": "HOCC, DAMMAM",
+      "location": "DAMMAM, SAUDI ARABIA",
+      "position": "Electrician & CCTV technician",
+      "experience": "3-5 YEARS",
+      "jobInformation": {
+        "interview": {
+          "date": "12TH SEPTEMBER 2024",
+          "location": "MUMBAI OFFICE"
+        },
+        "description": "Electrician & CCTV technician should have a diploma certificate of training from an accredited technical college, must have 3-5 years' Experience. Gulf Experienced preferred. (Must writing and talking English language)",
+        "age": "25 to 35",
+        "workingHours": "10 working hours",
+        "additionalInfo": ["SR 1600 SR Including (200 SR) food's allowance."]
+      }
+    },
+    {
+      "id": "house-cook",
+      "title": "HOUSE COOK",
+      "salary": "SR1500/- TO 1800/-",
+      "company": "Tawfiq Al Saleh Trad. Co., Riyadh, KSA",
+      "location": "Riyadh, KSA",
+      "position": "HOUSE COOK",
+      "experience": "2-3 years",
+      "jobInformation": {
+        "description": "M/s. Tawfiq Al Saleh Trad. Co., Riyadh, KSA",
+        "requirements": ["Need House Cook with experience in Kuwait."],
+        "additionalInfo": ["Salary: SR1500/- to SR1800/-"]
+      }
+    }
+  ]
+  
+  

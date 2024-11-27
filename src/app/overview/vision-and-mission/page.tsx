@@ -1,9 +1,7 @@
-import React from 'react'
+import { VisionAndMission } from "./VissionAndMission";
 
-function page() {
-  return (
-    <div>page</div>
-  )
+
+export default function VisionAndMissionPage() {
+  return <VisionAndMission />
 }
 
-export default page
