@@ -49,7 +49,7 @@ export function Footer() {
             href="https://x.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-[##1DA1F2] p-3 text-white transition-transform hover:scale-110"
+            className="rounded-full bg-[#1DA1F2] p-3 text-white transition-transform hover:scale-110"
             aria-label="Visit our Twitter profile"
           >
             <Twitter className="h-6 w-6" />

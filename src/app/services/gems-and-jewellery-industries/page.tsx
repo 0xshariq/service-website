@@ -1,9 +1,8 @@
-import React from 'react'
+import GemsJewellery from "./GemJewellery";
 
-function page() {
-  return (
-    <div>page</div>
-  )
+
+
+export default function GemsJewelleryPage() {
+  return <GemsJewellery />
 }
 
-export default page

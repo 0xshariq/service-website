@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import {
@@ -76,7 +77,24 @@ const navItems = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState<string | null>(null);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const currentNavItem = navItems.find(item => {
+      if (pathname === item.href) return true;
+      if (item.items?.some(subItem => pathname === subItem.href)) return true;
+      return false;
+    });
+    setActiveItem(currentNavItem?.name || null);
+  }, [pathname]);
+
+  const isItemActive = (item: typeof navItems[0]) => {
+    if (pathname === item.href) return true;
+    if (item.items?.some(subItem => pathname === subItem.href)) return true;
+    return false;
+  };
 
   return (
     <nav className="w-full bg-white">
@@ -131,7 +149,7 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full sm:w-[300px] p-0">
-              <MobileMenu setIsOpen={setIsOpen} />
+              <MobileMenu setIsOpen={setIsOpen} activeItem={activeItem} />
             </SheetContent>
           </Sheet>
         </div>
@@ -148,22 +166,41 @@ export function Navbar() {
                 onMouseLeave={() => setHoveredItem(null)}
               >
                 {item.items ? (
-                  <DropdownMenu open={hoveredItem === item.name}>
+                  <DropdownMenu
+                    open={hoveredItem === item.name}
+                    onOpenChange={(open) => {
+                      if (!open) setHoveredItem(null);
+                    }}
+                  >
                     <DropdownMenuTrigger
-                      className={`h-full px-2 sm:px-4 text-xs sm:text-[15px] font-medium ${
-                        hoveredItem === item.name
+                      className={`h-full px-2 sm:px-4 text-xs sm:text-[15px] font-medium transition-colors relative
+                        ${isItemActive(item) || hoveredItem === item.name
                           ? "text-[#FF6600]"
-                          : "text-white"
-                      }`}
+                          : "text-white hover:text-[#FF6600]"
+                        }
+                        ${isItemActive(item) ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#FF6600]" : ""}
+                      `}
                     >
                       {item.name}
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent>
+                    <DropdownMenuContent
+                      align="start"
+                      className="w-[220px] bg-white"
+                    >
                       {item.items.map((subItem) => (
-                        <DropdownMenuItem key={subItem.name} asChild>
+                        <DropdownMenuItem
+                          key={subItem.name}
+                          className={`${
+                            pathname === subItem.href ? "text-[#FF6600]" : ""
+                          }`}
+                        >
                           <Link
                             href={subItem.href}
-                            className="text-sm sm:text-[15px] text-gray-900 hover:text-[#FF6600]"
+                            className="w-full text-sm sm:text-[15px] py-2 hover:text-[#FF6600]"
+                            onClick={() => {
+                              setActiveItem(item.name);
+                              setHoveredItem(null);
+                            }}
                           >
                             {subItem.name}
                           </Link>
@@ -174,11 +211,14 @@ export function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`h-full flex items-center px-2 sm:px-4 text-xs sm:text-[15px] font-medium ${
-                      hoveredItem === item.name
+                    className={`h-full flex items-center px-2 sm:px-4 text-xs sm:text-[15px] font-medium transition-colors relative
+                      ${isItemActive(item) || hoveredItem === item.name
                         ? "text-[#FF6600]"
-                        : "text-white"
-                    }`}
+                        : "text-white hover:text-[#FF6600]"
+                      }
+                      ${isItemActive(item) ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#FF6600]" : ""}
+                    `}
+                    onClick={() => setActiveItem(item.name)}
                   >
                     {item.name}
                   </Link>
@@ -192,7 +232,15 @@ export function Navbar() {
   );
 }
 
-function MobileMenu({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) {
+function MobileMenu({ 
+  setIsOpen,
+  activeItem 
+}: { 
+  setIsOpen: (isOpen: boolean) => void;
+  activeItem: string | null;
+}) {
+  const pathname = usePathname();
+
   return (
     <div className="flex flex-col h-full">
       <div className="p-4 border-b">
@@ -213,10 +261,17 @@ function MobileMenu({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) {
       <div className="flex-grow overflow-y-auto">
         <Accordion type="single" collapsible className="w-full">
           {navItems.map((item, index) => (
-            <AccordionItem value={`item-${index}`} key={item.name}>
+            <AccordionItem 
+              value={`item-${index}`} 
+              key={item.name}
+            >
               {item.items ? (
                 <>
-                  <AccordionTrigger className="px-4 py-2 text-sm font-medium hover:text-[#FF6600]">
+                  <AccordionTrigger 
+                    className={`px-4 py-2 text-sm font-medium hover:text-[#FF6600] ${
+                      activeItem === item.name ? "text-[#FF6600]" : ""
+                    }`}
+                  >
                     {item.name}
                   </AccordionTrigger>
                   <AccordionContent>
@@ -225,7 +280,11 @@ function MobileMenu({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) {
                         <li key={subItem.name} className="py-2">
                           <Link
                             href={subItem.href}
-                            className="text-sm text-gray-600 hover:text-[#FF6600]"
+                            className={`text-sm ${
+                              pathname === subItem.href 
+                                ? "text-[#FF6600] font-medium" 
+                                : "text-gray-600 hover:text-[#FF6600]"
+                            }`}
                             onClick={() => setIsOpen(false)}
                           >
                             {subItem.name}
@@ -239,7 +298,11 @@ function MobileMenu({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) {
                 <div className="px-4 py-2">
                   <Link
                     href={item.href}
-                    className="text-sm font-medium hover:text-[#FF6600]"
+                    className={`text-sm font-medium ${
+                      activeItem === item.name 
+                        ? "text-[#FF6600]" 
+                        : "hover:text-[#FF6600]"
+                    }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
@@ -272,3 +335,4 @@ function MobileMenu({ setIsOpen }: { setIsOpen: (isOpen: boolean) => void }) {
     </div>
   );
 }
+

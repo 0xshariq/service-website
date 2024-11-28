@@ -1,9 +1,7 @@
-import React from 'react'
+import ConstructionIndustry from "./ConstrustionIndustry";
 
-function page() {
-  return (
-    <div>page</div>
-  )
+
+export default function ConstructionIndustryPage() {
+  return <ConstructionIndustry />
 }
 
-export default page
