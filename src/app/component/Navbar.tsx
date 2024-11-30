@@ -102,7 +102,7 @@ export function Navbar() {
         <div className="container mx-auto flex flex-col sm:flex-row sm:h-[140px] items-center justify-between px-4 py-4 sm:py-0">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-4 sm:mb-0">
             <Image
-              src="/placeholder.svg?height=100&width=100"
+              src="https://www.niceoverseasservice.com/wp-content/uploads/2022/02/nice-overseas-services-blue.jpg"
               alt="Nice Overseas Service Logo"
               width={100}
               height={100}
