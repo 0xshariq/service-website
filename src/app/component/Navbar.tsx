@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu } from 'lucide-react';
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -28,7 +28,7 @@ import {
 const navItems = [
   {
     name: "HOME",
-    href: "/"
+    href: "/",
   },
   {
     name: "OVERVIEW",
@@ -36,9 +36,12 @@ const navItems = [
     items: [
       { name: "About Us", href: "/overview/about-us" },
       { name: "Vision And Mission", href: "/overview/vision-and-mission" },
-      { name: "Licence & Certificates", href: "/overview/licence-and-certificates" },
+      {
+        name: "Licence & Certificates",
+        href: "/overview/licence-and-certificates",
+      },
       { name: "Our Associates", href: "/overview/our-associates" },
-    ]
+    ],
   },
   {
     name: "SERVICES",
@@ -46,9 +49,18 @@ const navItems = [
     items: [
       { name: "HRD & Recruitment", href: "/services/hrd-and-recruitment" },
       { name: "Banking & Finance", href: "/services/banking-and-finance" },
-      { name: "Hospitality Industries", href: "/services/hospitality-industries" },
-      { name: "Gems & Jewellery Industries", href: "/services/gems-and-jewellery-industries" },
-      { name: "Construction Industry", href: "/services/construction-industry" },
+      {
+        name: "Hospitality Industries",
+        href: "/services/hospitality-industries",
+      },
+      {
+        name: "Gems & Jewellery Industries",
+        href: "/services/gems-and-jewellery-industries",
+      },
+      {
+        name: "Construction Industry",
+        href: "/services/construction-industry",
+      },
     ],
   },
   { name: "JOBS", href: "/jobs" },
@@ -56,10 +68,19 @@ const navItems = [
     name: "EMPLOYER",
     href: "/employer",
     items: [
-      { name: "Demand Letter & Power Of Attorney Sample", href: "/employer/demand-letter-and-power-of-attorney-sample" },
-      { name: "Visa Procedure & Documentation", href: "/employer/visa-procedure-and-documentation" },
+      {
+        name: "Demand Letter & Power Of Attorney Sample",
+        href: "/employer/demand-letter-and-power-of-attorney-sample",
+      },
+      {
+        name: "Visa Procedure & Documentation",
+        href: "/employer/visa-procedure-and-documentation",
+      },
       { name: "Flow Chart", href: "/employer/flow-chart" },
-      { name: "Post Your Requirements", href: "/employer/post-your-requirements" },
+      {
+        name: "Post Your Requirements",
+        href: "/employer/post-your-requirements",
+      },
     ],
   },
   { name: "RESUME", href: "/resume" },
@@ -69,8 +90,11 @@ const navItems = [
     href: "/contact",
     items: [
       { name: "Contact Us", href: "/contact/contact-us" },
-      { name: "Grievance Redressal Form", href: "/contact/grievance-redressal-form" },
-    ]
+      {
+        name: "Grievance Redressal Form",
+        href: "/contact/grievance-redressal-form",
+      },
+    ],
   },
   { name: "APPLICATION FORM", href: "/application-form" },
 ];
@@ -82,17 +106,17 @@ export function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const currentNavItem = navItems.find(item => {
+    const currentNavItem = navItems.find((item) => {
       if (pathname === item.href) return true;
-      if (item.items?.some(subItem => pathname === subItem.href)) return true;
+      if (item.items?.some((subItem) => pathname === subItem.href)) return true;
       return false;
     });
     setActiveItem(currentNavItem?.name || null);
   }, [pathname]);
 
-  const isItemActive = (item: typeof navItems[0]) => {
+  const isItemActive = (item: (typeof navItems)[0]) => {
     if (pathname === item.href) return true;
-    if (item.items?.some(subItem => pathname === subItem.href)) return true;
+    if (item.items?.some((subItem) => pathname === subItem.href)) return true;
     return false;
   };
 
@@ -111,19 +135,7 @@ export function Navbar() {
                   priority
                 />
               </div>
-              <div className="pt-2">
-                <h1 className="text-[28px] font-bold text-[#0066CC] leading-tight">
-                  NICE OVERSEAS SERVICE
-                </h1>
-                <p className="text-[15px] text-gray-600 leading-snug">
-                  Human Resources Consultants
-                </p>
-                <p className="text-[15px] text-gray-600 leading-snug">
-                  REGD. No. B-0771/MUM/PER/1000-/S/7489/2006
-                </p>
-              </div>
             </div>
-
             <div className="flex flex-col items-end gap-2">
               <div className="text-right">
                 <p className="text-[15px] font-medium text-gray-600">
@@ -178,11 +190,16 @@ export function Navbar() {
                   >
                     <DropdownMenuTrigger
                       className={`h-full px-4 text-[15px] font-medium transition-colors relative
-                        ${isItemActive(item) || hoveredItem === item.name
-                          ? "text-[#FF6600]"
-                          : "text-white hover:text-[#FF6600]"
+                        ${
+                          isItemActive(item) || hoveredItem === item.name
+                            ? "text-[#FF6600]"
+                            : "text-white hover:text-[#FF6600]"
                         }
-                        ${isItemActive(item) ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#FF6600]" : ""}
+                        ${
+                          isItemActive(item)
+                            ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#FF6600]"
+                            : ""
+                        }
                       `}
                     >
                       {item.name}
@@ -216,11 +233,16 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     className={`h-full flex items-center px-4 text-[15px] font-medium transition-colors relative
-                      ${isItemActive(item) || hoveredItem === item.name
-                        ? "text-[#FF6600]"
-                        : "text-white hover:text-[#FF6600]"
+                      ${
+                        isItemActive(item) || hoveredItem === item.name
+                          ? "text-[#FF6600]"
+                          : "text-white hover:text-[#FF6600]"
                       }
-                      ${isItemActive(item) ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#FF6600]" : ""}
+                      ${
+                        isItemActive(item)
+                          ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-[#FF6600]"
+                          : ""
+                      }
                     `}
                     onClick={() => setActiveItem(item.name)}
                   >
@@ -236,10 +258,10 @@ export function Navbar() {
   );
 }
 
-function MobileMenu({ 
+function MobileMenu({
   setIsOpen,
-  activeItem 
-}: { 
+  activeItem,
+}: {
   setIsOpen: (isOpen: boolean) => void;
   activeItem: string | null;
 }) {
@@ -265,13 +287,10 @@ function MobileMenu({
       <div className="flex-grow overflow-y-auto">
         <Accordion type="single" collapsible className="w-full">
           {navItems.map((item, index) => (
-            <AccordionItem 
-              value={`item-${index}`} 
-              key={item.name}
-            >
+            <AccordionItem value={`item-${index}`} key={item.name}>
               {item.items ? (
                 <>
-                  <AccordionTrigger 
+                  <AccordionTrigger
                     className={`px-4 py-2 text-sm font-medium hover:text-[#FF6600] ${
                       activeItem === item.name ? "text-[#FF6600]" : ""
                     }`}
@@ -285,8 +304,8 @@ function MobileMenu({
                           <Link
                             href={subItem.href}
                             className={`text-sm ${
-                              pathname === subItem.href 
-                                ? "text-[#FF6600] font-medium" 
+                              pathname === subItem.href
+                                ? "text-[#FF6600] font-medium"
                                 : "text-gray-600 hover:text-[#FF6600]"
                             }`}
                             onClick={() => setIsOpen(false)}
@@ -303,8 +322,8 @@ function MobileMenu({
                   <Link
                     href={item.href}
                     className={`text-sm font-medium ${
-                      activeItem === item.name 
-                        ? "text-[#FF6600]" 
+                      activeItem === item.name
+                        ? "text-[#FF6600]"
                         : "hover:text-[#FF6600]"
                     }`}
                     onClick={() => setIsOpen(false)}
@@ -339,4 +358,3 @@ function MobileMenu({
     </div>
   );
 }
-
