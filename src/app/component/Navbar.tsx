@@ -99,65 +99,69 @@ export function Navbar() {
   return (
     <nav className="w-full bg-white">
       <div className="border-b">
-        <div className="container mx-auto flex flex-col sm:flex-row sm:h-[140px] items-center justify-between px-4 py-4 sm:py-0">
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-4 sm:mb-0">
-            <Image
-              src="https://www.niceoverseasservice.com/wp-content/uploads/2022/02/nice-overseas-services-blue.jpg"
-              alt="Nice Overseas Service Logo"
-              width={100}
-              height={100}
-              className="object-contain"
-            />
-            <div className="text-center sm:text-left">
-              <h1 className="text-2xl sm:text-[28px] font-bold text-[#0066CC]">
-                NICE OVERSEAS SERVICE
-              </h1>
-              <p className="text-sm sm:text-[15px] text-gray-600">
-                Human Resources Consultants
-              </p>
-              <p className="text-sm sm:text-[15px] text-gray-600">
-                REGD. No. B-0771/MUM/PER/1000-/S/7489/2006
-              </p>
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex justify-between items-center">
+            <div className="flex items-start gap-4">
+              <div className="w-[180px] h-[100px] relative flex-shrink-0">
+                <Image
+                  src="https://www.niceoverseasservice.com/wp-content/uploads/2022/02/nice-overseas-services-blue.jpg"
+                  alt="Nice Overseas Service Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div className="pt-2">
+                <h1 className="text-[28px] font-bold text-[#0066CC] leading-tight">
+                  NICE OVERSEAS SERVICE
+                </h1>
+                <p className="text-[15px] text-gray-600 leading-snug">
+                  Human Resources Consultants
+                </p>
+                <p className="text-[15px] text-gray-600 leading-snug">
+                  REGD. No. B-0771/MUM/PER/1000-/S/7489/2006
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
-            <div className="text-center sm:text-right">
-              <p className="text-sm sm:text-[15px] font-medium text-gray-600">
-                CALL US NOW :
-              </p>
-              <a
-                href="tel:+919820337086"
-                className="text-base sm:text-[17px] font-bold text-gray-800 hover:text-[#0066CC]"
+            <div className="flex flex-col items-end gap-2">
+              <div className="text-right">
+                <p className="text-[15px] font-medium text-gray-600">
+                  CALL US NOW :
+                </p>
+                <a
+                  href="tel:+919820337086"
+                  className="text-[17px] font-bold text-gray-800 hover:text-[#0066CC]"
+                >
+                  +91-9820337086
+                </a>
+              </div>
+              <Link
+                href="/brochure"
+                className="text-[15px] font-medium text-[#FF6600] hover:text-[#FF8533]"
               >
-                +91-9820337086
-              </a>
+                Download Brochure
+              </Link>
             </div>
-            <Link
-              href="/brochure"
-              className="text-sm sm:text-[15px] font-medium text-[#FF6600] hover:text-[#FF8533]"
-            >
-              Download Brochure
-            </Link>
-          </div>
 
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="sm:hidden">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-full sm:w-[300px] p-0">
-              <MobileMenu setIsOpen={setIsOpen} activeItem={activeItem} />
-            </SheetContent>
-          </Sheet>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon" className="lg:hidden">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Open menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-full sm:w-[300px] p-0">
+                <MobileMenu setIsOpen={setIsOpen} activeItem={activeItem} />
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
 
-      <div className="bg-[#333333]">
+      <div className="bg-[#333333] border-t border-gray-200">
         <div className="container mx-auto px-4">
-          <ul className="hidden sm:flex h-[60px] items-center justify-between overflow-x-auto">
+          <ul className="hidden lg:flex h-[60px] items-center justify-between">
             {navItems.map((item) => (
               <li
                 key={item.name}
@@ -173,7 +177,7 @@ export function Navbar() {
                     }}
                   >
                     <DropdownMenuTrigger
-                      className={`h-full px-2 sm:px-4 text-xs sm:text-[15px] font-medium transition-colors relative
+                      className={`h-full px-4 text-[15px] font-medium transition-colors relative
                         ${isItemActive(item) || hoveredItem === item.name
                           ? "text-[#FF6600]"
                           : "text-white hover:text-[#FF6600]"
@@ -196,7 +200,7 @@ export function Navbar() {
                         >
                           <Link
                             href={subItem.href}
-                            className="w-full text-sm sm:text-[15px] py-2 hover:text-[#FF6600]"
+                            className="w-full text-[15px] py-2 hover:text-[#FF6600]"
                             onClick={() => {
                               setActiveItem(item.name);
                               setHoveredItem(null);
@@ -211,7 +215,7 @@ export function Navbar() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`h-full flex items-center px-2 sm:px-4 text-xs sm:text-[15px] font-medium transition-colors relative
+                    className={`h-full flex items-center px-4 text-[15px] font-medium transition-colors relative
                       ${isItemActive(item) || hoveredItem === item.name
                         ? "text-[#FF6600]"
                         : "text-white hover:text-[#FF6600]"
